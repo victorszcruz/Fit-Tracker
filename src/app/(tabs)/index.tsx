@@ -51,7 +51,8 @@ export default function HomeScreen() {
   const s = data?.summary,
     g = data?.goals;
   const coverage = (key: keyof typeof t.nutrients) => {
-    const c = s!.nutrients[key];
+    const c = s?.nutrients[key];
+    if (!c) return '';
     return `${t.nutrients[key]}: ${f(c.total)} · ${c.known}/${c.entries} ${isPt ? 'registros conhecidos' : 'known entries'}${c.complete ? '' : ' · ' + t.partial}`;
   };
   return (

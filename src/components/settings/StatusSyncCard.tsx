@@ -350,6 +350,7 @@ const styles = StyleSheet.create({
   },
   headerRow: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: spacing.sm,
@@ -359,6 +360,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: spacing.sm,
     flex: 1,
+    flexBasis: '100%',
   },
   iconWrapper: {
     width: 28,
@@ -374,6 +376,7 @@ const styles = StyleSheet.create({
   },
   statusBadge: {
     flexDirection: 'row',
+    maxWidth: '100%',
     alignItems: 'center',
     gap: 6,
     paddingHorizontal: spacing.sm + 2,
@@ -387,6 +390,7 @@ const styles = StyleSheet.create({
     borderRadius: radii.full,
   },
   statusBadgeText: {
+    flexShrink: 1,
     letterSpacing: 0.8,
     fontWeight: '800',
   },
